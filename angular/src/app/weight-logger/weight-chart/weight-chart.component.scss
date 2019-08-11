@@ -1,0 +1,26 @@
+.wrapper {
+  height: 70px;
+  width: 100%;
+  border: 1px;
+  border-style: dashed;
+
+  div.item {
+    margin: 0px;
+    width: 25%;
+    height: 70px;
+    float: left;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e1f5fa;
+    }
+
+    &.selected {
+      background-color: #91a08e;
+    }
+  }
+}

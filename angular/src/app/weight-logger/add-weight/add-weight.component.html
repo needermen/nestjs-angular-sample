@@ -1,0 +1,29 @@
+<h3>Quick Add</h3>
+<div class="wrapper">
+  <div>
+    <div class="item day" [ngClass]="{'selected': selectedDay == 'yesterday'}" (click)="selectDay('yesterday')">
+      <p>Yesterday</p>
+    </div>
+    <div class="item day" [ngClass]="{'selected': selectedDay == 'today'}" (click)="selectDay('today')">
+      <p>Today</p>
+    </div>
+    <div class="item measure">
+      <div class="kg" [ngClass]="{'selected': measureSelected == 'kg'}" (click)="selectMeasure('kg')">
+        <p>KG</p>
+      </div>
+      <div class="lbs" [ngClass]="{'selected': measureSelected == 'lbs'}" (click)="selectMeasure('lbs')">
+        <p>LBS</p>
+      </div>
+      <input type="number" [step]="0.1" [(ngModel)]="weight" [defaultValue]="83">
+    </div>
+    <div class="item">
+      <button (click)="saveWeightLog()">SAVE</button>
+    </div>
+  </div>
+</div>
+<br>
+<h3>Add With Uploading Json Files</h3>
+<p-fileUpload [url]="uploadsUrl" name="files" multiple="multiple"
+              accept=".json">
+</p-fileUpload>
+<div style="margin-bottom: 100px"></div>

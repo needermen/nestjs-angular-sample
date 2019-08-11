@@ -1,0 +1,23 @@
+<div>
+  <input type="text" class="search" [formControl]="searchControl" placeholder="type to search"/>
+  <fa-icon [icon]="faBroom" class="icon broom" (click)="onClearSearchClick()"></fa-icon>
+</div>
+
+<br>
+
+<ng-container *ngIf="todos?.length > 0; else empty">
+  <ng-container *ngFor="let todo of todos">
+    <app-todo-item [todo]="todo" *ngIf="todo" (deleted)="onItemRemoved()">
+    </app-todo-item>
+    <br>
+  </ng-container>
+</ng-container>
+
+<app-todo-create (created)="onItemAdded()">
+</app-todo-create>
+
+<ng-template #empty>
+  <div class="empty">
+    <p>empty</p>
+  </div>
+</ng-template>

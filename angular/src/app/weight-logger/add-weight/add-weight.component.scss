@@ -1,0 +1,55 @@
+.wrapper {
+  height: 100px;
+  width: 100%;
+  border: 1px;
+  border-style: dashed;
+
+  div.item {
+    margin: 0px;
+    width: 25%;
+    height: 100px;
+    float: left;
+
+    &.day {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #e1f5fa;
+      }
+
+      &.selected {
+        background-color: #91a08e;
+      }
+    }
+
+
+    &.measure {
+      //doesn't work .kg .lbs, find out why
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: left;
+        width: 50%;
+        height: 63px;
+
+        &:hover {
+          background-color: #d3faf3;
+        }
+
+        &.selected {
+          background-color: #5b8075;
+        }
+      }
+    }
+
+    button {
+      font-size: 25px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

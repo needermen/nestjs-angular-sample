@@ -1,0 +1,14 @@
+<div *ngIf="!editMode; else editInputContainer">
+  <span class="text" (click)="onTextClick()">{{todo.text}}</span>
+  <fa-icon [icon]="faTrashAlt" class="icon" (click)="onDeleteClick()"></fa-icon>
+</div>
+
+<ng-template #editInputContainer>
+  <div>
+    <input type="text"
+           #editInput
+           (keyup)="onEditKeyUp($event)"
+           (blur)="onBlur()"
+           [(ngModel)]="todo.text">
+  </div>
+</ng-template>

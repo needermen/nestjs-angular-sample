@@ -1,0 +1,18 @@
+<div class="wrapper">
+  <div>
+    <div class="item" [ngClass]="{'selected': selectedFilter == 'week'}" (click)="selectFilter('week')">
+      <p>last 7 days</p>
+    </div>
+    <div class="item" [ngClass]="{'selected': selectedFilter == 'month'}" (click)="selectFilter('month')">
+      <p>last month</p>
+    </div>
+    <div class="item" [ngClass]="{'selected': selectedFilter == 'block'}" (click)="selectFilter('block')">
+      <p>last block</p>
+    </div>
+    <div class="item" [ngClass]="{'selected': selectedFilter == 'year'}" (click)="selectFilter('year')">
+      <p>last year</p>
+    </div>
+  </div>
+</div>
+<br>
+<p-chart type="line" [data]="data"></p-chart>
