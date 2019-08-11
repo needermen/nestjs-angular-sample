@@ -1,9 +1,27 @@
-# running
+# Server NestJs
+
+## Installing Dependencies
+
+cd nestjs 
+
+npm i
+
+## Running
 
 cd nestjs
+
 npm run start
 
-cd angluar
-ng serve
+# Frontend Angular
 
-enjoy
+## Installing Dependencies
+
+cd angular 
+
+npm i
+
+## Running
+
+cd angular
+
+npm serve -o
