@@ -1,4 +1,4 @@
-# Server NestJs
+# Server (NestJs)
 
 ## Installing Dependencies
 
@@ -12,7 +12,7 @@ cd nestjs
 
 npm run start
 
-# Frontend Angular
+# Frontend (Angular)
 
 ## Installing Dependencies
 
@@ -24,4 +24,4 @@ npm i
 
 cd angular
 
-npm serve -o
+ng serve -o
